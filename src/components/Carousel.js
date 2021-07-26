@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Fade from '@material-ui/core/Fade';
 import Slide from '@material-ui/core/Slide';
 import IconButton from '@material-ui/core/IconButton';
-import { withStyles } from '@material-ui/styles';
+import { withStyles, createStyles } from '@material-ui/styles';
 import autoBind from 'auto-bind';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
@@ -489,4 +489,4 @@ function Indicators(props)
     )
 }
 
-export default withStyles(styles)(Carousel);
+export default withStyles(() => createStyles(styles))(Carousel);
